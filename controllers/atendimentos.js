@@ -1,20 +1,11 @@
 
 const Atendimento = require('../models/atendimentos')
-var cors = require('cors')
 
-var corsOptions = {
-    origin: '*',
-    methods: ['GET', 'POST', 'PUT', 'PATCH', 'POST', 'DELETE', 'OPTIONS'],
-    credentials: true,
-    allowedHeaders: ['Authorization', 'Content-Type', 'Access-Control-Allow-Origin','application/x-www-form-urlencoded; charset=UTF-8'],
-    optionsSuccessStatus: 200
-  }
 
 module.exports = app => {
 
 
-    app.get('/atendimentos', cors(corsOptions), (req, res) => {
-        app.use(cors())
+    app.get('/atendimentos',(req, res) => {
 
         Atendimento.lista(res)
     })
@@ -30,11 +21,9 @@ module.exports = app => {
         Atendimento.altera(id, valores, res)
      })
 
-    app.post('/atendimentos', cors(corsOptions), (req, res) => {
+    app.post('/atendimentos', (req, res) => {
         //console.log(req.body)
-        //res.send('Você está na rota de atendimentos e está chamando o POST')
-        app.use(cors())
-        
+        //res.send('Você está na rota de atendimentos e está chamando o POST')    
 
         const atendimento = req.body
         Atendimento.adiciona(atendimento, res)

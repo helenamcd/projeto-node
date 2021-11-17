@@ -18,6 +18,7 @@ function adicionaNoBanco(){
         'nome': form.nome.value,
         'solicitacao': form.solicitacao.value,
         'status': 'solicitado'
+        //'data': data_retirada
     };
 
     var formBody = [];
@@ -39,6 +40,8 @@ function adicionaNoBanco(){
             alert(xhr.responseText);
         }
      }
+
+     console.log(formBody);
 
      xhr.send(formBody);
 
