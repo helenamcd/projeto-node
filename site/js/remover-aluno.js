@@ -19,7 +19,7 @@ tabela.addEventListener("dblclick", function(event) {
 
         xhr.open("DELETE", `http://localhost:3000/atendimentos/${id}`, true);
 
-        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
+        //xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
 
         xhr.onload = function () {
             var users = JSON.parse(xhr.responseText);

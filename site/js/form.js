@@ -12,13 +12,13 @@ function adicionaNoBanco(){
 
     var aluno = obtemAlunoDoFormulario(form);
 
-    var data_retirada = moment(form.retirada.value, 'YYYY-MM-DD HH:mm:ss').format('DD/MM/YYYY');
+    var data_retirada = moment(form.retirada.value, 'YYYY-MM-DD').format('DD/MM/YYYY');
 
     var details = {
         'nome': form.nome.value,
         'solicitacao': form.solicitacao.value,
-        'status': 'solicitado'
-        //'data': data_retirada
+        'status': 'solicitado',
+        'data': data_retirada
     };
 
     var formBody = [];
@@ -41,7 +41,7 @@ function adicionaNoBanco(){
         }
      }
 
-     console.log(formBody);
+     //console.log(formBody);
 
      xhr.send(formBody);
 

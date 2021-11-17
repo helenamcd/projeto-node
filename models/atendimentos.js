@@ -8,7 +8,7 @@ class Atendimento {
         const data = moment(atendimento.data, 'DD/MM/YYYY').format('YYYY-MM-DD HH:mm:ss')
         
         const dataEhValida = moment(data).isSameOrAfter(dataCriacao)
-        const alunoEhValido = atendimento.aluno.length >=2
+        const alunoEhValido = atendimento.nome.length >=2
 
         const validacoes = [
             {

@@ -30,6 +30,9 @@ module.exports = app => {
     })
 
     app.delete('/atendimentos/:id', (req, res) =>{
+        console.log(req.body)
+        
+        console.log(req.params.id)
         const id = parseInt(req.params.id)
         Atendimento.deleta(id, res)
     })
