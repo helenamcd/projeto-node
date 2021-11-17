@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>UFPR - Sistema Acadêmico</title>
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+
+	</head>
+	<body>
+
+		<header>
+			<div class="container">
+				<h2 class="titulo">UFPR - Secretaria Acadêmica)</h2>
+			</div>
+		</header>
+		<main>
+			<section class="container">
+				<h2>Alunos</h2>
+				<label for="filtrar-tabela">Filtre:</label>
+				<input type="text" name="filtro" id="filtrar-tabela" placeholder="Digite o nome do aluno">
+				<table>
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th>Nome</th>
+							<th>Solicitação</th>
+							<th>Data da Solicitação</th>
+							<th>Data Retirada</th>
+							<th>Status</th>
+						</tr>
+					</thead>
+					<tbody id="tabela-alunos">
+
+					</tbody>
+				</table>
+				<span id="erro-ajax" class="invisivel">Erro ao buscar os alunos</span>
+
+				<button id="buscar-alunos" class="botao bto-principal">Buscar Alunos</button>
+
+			</section>
+		</main>
+
+		<section class="container">
+		    <h2 id="titulo-form">Adicionar novo aluno</h2>
+			<ul id="mensagens-erro"></ul>
+		    <form id="form-adiciona">
+		        <div class="">
+		            <label for="nome">Nome:</label>
+		            <input id="nome" name="nome" type="text" placeholder="digite o nome do aluno" class="campo">
+		        </div>
+		        <div class="grupo">
+		            <label for="solicitacao">Solicitação:</label>
+		            <input id="solicitacao" name="solicitacao" type="text" placeholder="digite a sua solicitação" class="campo campo-medio">
+		        </div>
+		        <div class="grupo">
+		            <label for="retirada">Data de retirada:</label>
+		            <input id="retirada" name="retirada" type="date" placeholder="digite a data de retirada" class="campo campo-medio">
+		        </div>
+
+		        <button id="adicionar-aluno" class="botao bto-principal">Adicionar</button>
+		    </form>
+		</section>
+
+
+		
+
+		<script src="js/form.js" ></script>
+		<script src="js/remover-aluno.js" ></script>
+		<script src="js/filtra.js" ></script>
+		<script src="js/buscar-alunos.js" ></script>
+		<script src="js/moment.js" ></script>
+
+	</body>
+</html>
